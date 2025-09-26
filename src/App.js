@@ -480,14 +480,22 @@ const AnalysisPage = ({ openModal }) => {
         <div className="row">
           <div className="col-md-6 text-center">
             <h5>Uploaded Image</h5>
-            {preview && (
+            {preview?(
               <img
                 src={preview}
                 alt="Uploaded Preview"
                 className="img-fluid rounded shadow-sm mb-3"
                 style={{ maxHeight: "300px", objectFit: "contain" }}
               />
+            ):(
+              <img
+                src={'/2.gif'}
+                alt="Uploaded Preview"
+                className="img-fluid rounded shadow-sm mb-3"
+                style={{ maxHeight: "300px", objectFit: "contain" }}
+              />
             )}
+            
             <input
               type="file"
               className="form-control mb-3"
@@ -503,17 +511,39 @@ const AnalysisPage = ({ openModal }) => {
             </button>
           </div>
 
-          <div className="col-md-6 text-center">
-            <h5>Grad-CAM Heatmap</h5>
-            {heatmap && (
-              <img
-                src={heatmap}
-                alt="Grad-CAM Heatmap"
-                className="img-fluid rounded shadow-sm"
-                style={{ maxHeight: "300px", objectFit: "contain" }}
-              />
-            )}
-          </div>
+<div className="col-md-6 text-center">
+  <h5>AI Analysis</h5>
+  {heatmap?(
+    <img
+      src={heatmap}
+      alt="Grad-CAM Heatmap"
+      className="img-fluid rounded shadow-sm mb-3"
+      style={{ maxHeight: "300px", objectFit: "contain" }}
+    />
+  ):(
+    <img
+      src={'/gif1.webp'}
+      alt="Grad-CAM Heatmap"
+      className="img-fluid rounded shadow-sm mb-3"
+      style={{ maxHeight: "300px", objectFit: "contain" }}
+    />
+  )}
+
+  {/* Detected condition */}
+  {predictions && (
+    <div className="mt-3">
+      <h3 className="">
+        Detected Condition:{" "}
+        <b>{Object.keys(predictions).length > 0
+          ? Object.entries(predictions).reduce((a, b) =>
+              a[1] > b[1] ? a : b
+            )[0]
+          : "N/A"}
+          </b>
+      </h3>
+    </div>
+  )}
+</div>
         </div>
 
         {/* Second row: Chart full width */}
