@@ -1,0 +1,93 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon567f.eot?8z98zf');
+  src:  url('fonts/icomoon567f.eot?8z98zf#iefix') format('embedded-opentype'),
+    url('fonts/icomoon567f.ttf?8z98zf') format('truetype'),
+    url('fonts/icomoon567f.woff?8z98zf') format('woff'),
+    url('fonts/icomoon567f.svg?8z98zf#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-sidebar:before {
+  content: "\e915";
+}
+.icon-unlike:before {
+  content: "\e90e";
+}
+.icon-like:before {
+  content: "\e912";
+}
+.icon-CaretDoubleRight:before {
+  content: "\e90a";
+}
+.icon-Clock:before {
+  content: "\e90b";
+}
+.icon-CheckCircle:before {
+  content: "\e90c";
+}
+.icon-FileText:before {
+  content: "\e90d";
+}
+.icon-MagnifyingGlass:before {
+  content: "\e90f";
+}
+.icon-star:before {
+  content: "\e910";
+}
+.icon-Tag:before {
+  content: "\e911";
+}
+.icon-User:before {
+  content: "\e913";
+}
+.icon-ArrowUpRight:before {
+  content: "\e914";
+}
+.icon-gemini:before {
+  content: "\e908";
+}
+.icon-cloud:before {
+  content: "\e909";
+}
+.icon-gpt:before {
+  content: "\e900";
+}
+.icon-menu:before {
+  content: "\e901";
+}
+.icon-close:before {
+  content: "\e902";
+}
+.icon-arrow-top:before {
+  content: "\e903";
+}
+.icon-arrow-caret-down:before {
+  content: "\e904";
+}
+.icon-arrow-circle:before {
+  content: "\e905";
+}
+.icon-plus:before {
+  content: "\e906";
+}
+.icon-micro:before {
+  content: "\e907";
+}
