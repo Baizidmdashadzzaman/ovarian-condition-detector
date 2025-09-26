@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { predictOvarianCondition } from "./api/huggingface";
-import '@google/model-viewer';
 
 import { Bar } from "react-chartjs-2";
 import {
