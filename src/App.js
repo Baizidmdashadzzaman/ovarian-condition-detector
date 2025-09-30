@@ -175,13 +175,13 @@ const HomePage = ({ navigate }) => (
             />
             <FeatureCard
                 icon="M4 7v10M20 7v10M4 7h16M4 17h16M8 4h8M8 20h8M12 4v16"
-                bgColor="bg-accent-custom"
+                bgColor="bg-primary-custom"
                 title="Three Key Conditions"
                 description="Specialized detection for Dominant Follicle, Normal Ovarian function, and Polycystic Ovaries (PCO)."
             />
             <FeatureCard
                 icon="M13 10V3L4 14h7v7l9-11h-7z"
-                bgColor="bg-light-pink-custom"
+                bgColor="bg-primary-custom"
                 title="Informative & Educational"
                 description="Access clear explanations and context for every analysis result to better understand the findings."
             />
@@ -211,9 +211,9 @@ const AboutPage = ({ navigate }) => (
         </p>
 
         <div className="row g-4">
-            <StepCard step="1" bgColor="bg-light-pink-custom" title="Data Ingestion" description="Ultrasound images/datasets are securely uploaded and processed for feature extraction." />
+            <StepCard step="1" bgColor="bg-primary-custom" title="Data Ingestion" description="Ultrasound images/datasets are securely uploaded and processed for feature extraction." />
             <StepCard step="2" bgColor="bg-primary-custom" title="AI Classification" description="Our deep learning model analyzes follicular size, count, and distribution patterns." />
-            <StepCard step="3" bgColor="bg-accent-custom" title="Rapid Diagnosis" description="The result is classified into one of the three key ovarian conditions with a confidence score." />
+            <StepCard step="3" bgColor="bg-primary-custom" title="Rapid Diagnosis" description="The result is classified into one of the three key ovarian conditions with a confidence score." />
         </div>
 
         <div className="mt-5 pt-3 text-center">
@@ -244,7 +244,7 @@ const ConditionsPage = () => (
         <div className="d-grid gap-4">
             <ConditionCard
                 emoji="🥚"
-                colorClass="border-accent-custom"
+                colorClass="border-primary-custom"
                 title="Dominant Follicle (DF)"
                 definition="Indicates the presence of a single follicle that has grown significantly larger than the others, typically measuring over 10mm in diameter, and is expected to rupture during ovulation."
                 significance={[
@@ -266,7 +266,7 @@ const ConditionsPage = () => (
             />
             <ConditionCard
                 emoji="🧫"
-                colorClass="border-danger-custom"
+                colorClass="border-primary-custom"
                 title="Polycystic Ovaries (PCO)"
                 definition="The appearance of the ovary is enlarged and contains 12 or more follicles, measuring 2-9mm in diameter, typically arranged peripherally ('string of pearls' sign)."
                 significance={[
@@ -292,7 +292,7 @@ const ConditionCard = ({ emoji, colorClass, title, definition, significance }) =
                 <div>
                     <h3 className={`fs-3 font-serif fw-bold ${textColor} mb-2`}>{title}</h3>
                     <p className="text-dark mb-3">
-                        **Definition:** {definition}
+                        {definition}
                     </p>
                     <h4 className="fs-5 fw-semibold text-dark">Significance:</h4>
                     <ul className="list-unstyled text-secondary ps-3">
@@ -861,7 +861,10 @@ const App = () => {
                 {/* Footer */}
                 <footer className="text-white mt-5" style={{backgroundColor:'rgb(236 72 153)'}}>
                     <div className="container-fluid container-lg py-4 px-4 text-center">
-                        <p className="mb-0 small">&copy; 2025 OvaQuick. Advanced Ovarian Health Insights. Disclaimer: This system is for informational and research purposes only and does not constitute medical advice.</p>
+                        <p className="mb-0 small">&copy; 2025 OvaQuick. Advanced Ovarian Health Insights. 
+                            <br/>
+                            Disclaimer: This system is for informational and research purposes only and does not constitute medical advice.
+                        </p>
                     </div>
                 </footer>
 
